@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh_TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style> 
+        * { margin: 0; padding: 0; border: 0; position: relative; } 
+        .userFollower {position: absolute; color: #fff; z-index: 2; top: 0;}
+        #blocker { position:absolute;width:100%;height:100%;background-color:rgba(0,0,0,0.5);z-index: 1; }
+        #loadingMessage { position:absolute;width:100%;height:100%;background-color:rgba(0,0,0,1);z-index: 2;display: flex;justify-content: center;align-items: center;color: #fff; }
+        #canvas { width: 100vw; height: 100vh; }
+    </style>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "../node_modules/three/build/three.module.min.js",
+                "three/addons/": "../node_modules/three/examples/jsm/"
+            }
+        }
+    </script>
+    <title>WebSockect + Three</title>
+</head>
+<body>
+    <div id="blocker"></div>
+    <div id="loadingMessage">載入中，請耐心等待...</div>
+</body>
+<script type="module" src="script.js"></script>
+</html>
